@@ -12,17 +12,9 @@ var check = 0;
 var count = 0;
 
 
-/// MOBILE
-$("body").on("vclick",()=>{
-    if(check === 0){
-        check = 1;
-        setTimeout(function(){
-            nextSequence();
-        },250);
-    }
-})
 
 $("body").on("keypress",function(){
+    
     if(check === 0){
         check = 1;
         setTimeout(function(){
@@ -33,9 +25,8 @@ $("body").on("keypress",function(){
 
 
 
-
-// get back id of button that was clicked
 $(".btn").on("click", function(){
+   
     if(check === 1){
         userChosenColor = this.id;
         userClickedPattern.push(userChosenColor);
@@ -54,28 +45,6 @@ $(".btn").on("click", function(){
             },500);
         }
 })
-
-// MOBILE
-$(".btn").on("vclick", function(){
-    if(check === 1){
-        userChosenColor = this.id;
-        userClickedPattern.push(userChosenColor);
-        playSound(userChosenColor);
-        animatePress(userChosenColor);
-        if(checkAnswer(count) === 1){
-            count++;
-        }
-    }
-        if(count === (level+1)){
-            level++;
-            userClickedPattern = [];
-            count = 0;
-            setTimeout(function(){
-                nextSequence();
-            },500);
-        }
-})
-
 
 
 
