@@ -11,6 +11,8 @@ var level = 0;
 var check = 0;
 var count = 0;
 
+
+/// MOBILE
 $("body").on("tap",()=>{
     if(check === 0){
         check = 1;
@@ -28,6 +30,9 @@ $("body").on("keypress",function(){
         },250);
     }
 })
+
+
+
 
 // get back id of button that was clicked
 $(".btn").on("click", function(){
@@ -50,7 +55,7 @@ $(".btn").on("click", function(){
         }
 })
 
-
+// MOBILE
 $(".btn").on("tap", function(){
     if(check === 1){
         userChosenColor = this.id;
@@ -70,6 +75,9 @@ $(".btn").on("tap", function(){
             },500);
         }
 })
+
+
+
 
 // LIST OF FUNCTIONS
 
@@ -130,3 +138,4 @@ function nextSequence(){
     $(choose).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColor);
 }
+
