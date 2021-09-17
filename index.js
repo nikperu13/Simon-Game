@@ -13,7 +13,7 @@ var count = 0;
 
 
 /// MOBILE
-$("body").on("tap",()=>{
+$("body").on("vclick",()=>{
     if(check === 0){
         check = 1;
         setTimeout(function(){
@@ -56,7 +56,7 @@ $(".btn").on("click", function(){
 })
 
 // MOBILE
-$(".btn").on("tap", function(){
+$(".btn").on("vclick", function(){
     if(check === 1){
         userChosenColor = this.id;
         userClickedPattern.push(userChosenColor);
